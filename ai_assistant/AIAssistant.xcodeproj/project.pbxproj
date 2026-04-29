@@ -1,0 +1,459 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		010000000000000000000001 /* AIAssistantApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020000000000000000000001 /* AIAssistantApp.swift */; };
+		010000000000000000000002 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020000000000000000000002 /* Theme.swift */; };
+		010000000000000000000003 /* FeatureDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020000000000000000000003 /* FeatureDestination.swift */; };
+		01000000000000000000000D /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 02000000000000000000000F /* MobileNetV2.mlmodel */; };
+		01000000000000000000000E /* ImageNetLabelLocalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020000000000000000000010 /* ImageNetLabelLocalizer.swift */; };
+		010000000000000000000004 /* FeatureCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020000000000000000000004 /* FeatureCard.swift */; };
+		010000000000000000000005 /* ModelStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020000000000000000000005 /* ModelStatusView.swift */; };
+		010000000000000000000006 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020000000000000000000006 /* HomeView.swift */; };
+		010000000000000000000007 /* ImageClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020000000000000000000007 /* ImageClassifier.swift */; };
+		010000000000000000000008 /* ImageRecognitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020000000000000000000008 /* ImageRecognitionView.swift */; };
+		010000000000000000000009 /* SpeechProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020000000000000000000009 /* SpeechProcessor.swift */; };
+		01000000000000000000000A /* SpeechProcessingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02000000000000000000000A /* SpeechProcessingView.swift */; };
+		01000000000000000000000B /* ImageGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02000000000000000000000B /* ImageGenerator.swift */; };
+		01000000000000000000000C /* ImageGenerationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02000000000000000000000C /* ImageGenerationView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		020000000000000000000001 /* AIAssistantApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIAssistantApp.swift; sourceTree = "<group>"; };
+		020000000000000000000002 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		020000000000000000000003 /* FeatureDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureDestination.swift; sourceTree = "<group>"; };
+		020000000000000000000004 /* FeatureCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCard.swift; sourceTree = "<group>"; };
+		020000000000000000000005 /* ModelStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelStatusView.swift; sourceTree = "<group>"; };
+		020000000000000000000006 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		020000000000000000000007 /* ImageClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassifier.swift; sourceTree = "<group>"; };
+		020000000000000000000008 /* ImageRecognitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRecognitionView.swift; sourceTree = "<group>"; };
+		020000000000000000000009 /* SpeechProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechProcessor.swift; sourceTree = "<group>"; };
+		02000000000000000000000A /* SpeechProcessingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechProcessingView.swift; sourceTree = "<group>"; };
+		02000000000000000000000B /* ImageGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGenerator.swift; sourceTree = "<group>"; };
+		02000000000000000000000C /* ImageGenerationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGenerationView.swift; sourceTree = "<group>"; };
+		02000000000000000000000D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		02000000000000000000000E /* AIAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		02000000000000000000000F /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2.mlmodel; sourceTree = "<group>"; };
+		020000000000000000000010 /* ImageNetLabelLocalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageNetLabelLocalizer.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		030000000000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		040000000000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				040000000000000000000002 /* AIAssistant */,
+				04000000000000000000000B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		040000000000000000000002 /* AIAssistant */ = {
+			isa = PBXGroup;
+			children = (
+				040000000000000000000003 /* App */,
+				040000000000000000000004 /* Models */,
+				040000000000000000000005 /* UI */,
+				040000000000000000000006 /* Views */,
+				040000000000000000000007 /* Components */,
+				040000000000000000000008 /* Features */,
+				02000000000000000000000D /* Assets.xcassets */,
+			);
+			path = AIAssistant;
+			sourceTree = "<group>";
+		};
+		040000000000000000000003 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				020000000000000000000001 /* AIAssistantApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		040000000000000000000004 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				020000000000000000000003 /* FeatureDestination.swift */,
+				02000000000000000000000F /* MobileNetV2.mlmodel */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		040000000000000000000005 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				020000000000000000000002 /* Theme.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		040000000000000000000006 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				020000000000000000000006 /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		040000000000000000000007 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				020000000000000000000004 /* FeatureCard.swift */,
+				020000000000000000000005 /* ModelStatusView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		040000000000000000000008 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				040000000000000000000009 /* ImageRecognition */,
+				04000000000000000000000A /* SpeechProcessing */,
+				04000000000000000000000C /* ImageGeneration */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		040000000000000000000009 /* ImageRecognition */ = {
+			isa = PBXGroup;
+			children = (
+				020000000000000000000007 /* ImageClassifier.swift */,
+				020000000000000000000008 /* ImageRecognitionView.swift */,
+				020000000000000000000010 /* ImageNetLabelLocalizer.swift */,
+			);
+			path = ImageRecognition;
+			sourceTree = "<group>";
+		};
+		04000000000000000000000A /* SpeechProcessing */ = {
+			isa = PBXGroup;
+			children = (
+				020000000000000000000009 /* SpeechProcessor.swift */,
+				02000000000000000000000A /* SpeechProcessingView.swift */,
+			);
+			path = SpeechProcessing;
+			sourceTree = "<group>";
+		};
+		04000000000000000000000B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				02000000000000000000000E /* AIAssistant.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04000000000000000000000C /* ImageGeneration */ = {
+			isa = PBXGroup;
+			children = (
+				02000000000000000000000B /* ImageGenerator.swift */,
+				02000000000000000000000C /* ImageGenerationView.swift */,
+			);
+			path = ImageGeneration;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		050000000000000000000001 /* AIAssistant */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 090000000000000000000002 /* Build configuration list for PBXNativeTarget "AIAssistant" */;
+			buildPhases = (
+				060000000000000000000001 /* Sources */,
+				030000000000000000000001 /* Frameworks */,
+				060000000000000000000002 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AIAssistant;
+			productName = AIAssistant;
+			productReference = 02000000000000000000000E /* AIAssistant.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		070000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					050000000000000000000001 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = 090000000000000000000001 /* Build configuration list for PBXProject "AIAssistant" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 040000000000000000000001;
+			productRefGroup = 04000000000000000000000B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				050000000000000000000001 /* AIAssistant */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		060000000000000000000002 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		060000000000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				010000000000000000000001 /* AIAssistantApp.swift in Sources */,
+				010000000000000000000002 /* Theme.swift in Sources */,
+				010000000000000000000003 /* FeatureDestination.swift in Sources */,
+				01000000000000000000000D /* MobileNetV2.mlmodel in Sources */,
+				01000000000000000000000E /* ImageNetLabelLocalizer.swift in Sources */,
+				010000000000000000000004 /* FeatureCard.swift in Sources */,
+				010000000000000000000005 /* ModelStatusView.swift in Sources */,
+				010000000000000000000006 /* HomeView.swift in Sources */,
+				010000000000000000000007 /* ImageClassifier.swift in Sources */,
+				010000000000000000000008 /* ImageRecognitionView.swift in Sources */,
+				010000000000000000000009 /* SpeechProcessor.swift in Sources */,
+				01000000000000000000000A /* SpeechProcessingView.swift in Sources */,
+				01000000000000000000000B /* ImageGenerator.swift in Sources */,
+				01000000000000000000000C /* ImageGenerationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		080000000000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		080000000000000000000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		080000000000000000000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = AIAssistant;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "AIAssistant 需要麦克风权限用于语音处理和转写。";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "AIAssistant 需要访问照片以进行图像识别。";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "AIAssistant 需要语音识别权限以生成转写文本。";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lanht.AIAssistant;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		080000000000000000000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = AIAssistant;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "AIAssistant 需要麦克风权限用于语音处理和转写。";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "AIAssistant 需要访问照片以进行图像识别。";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "AIAssistant 需要语音识别权限以生成转写文本。";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lanht.AIAssistant;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		090000000000000000000001 /* Build configuration list for PBXProject "AIAssistant" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				080000000000000000000001 /* Debug */,
+				080000000000000000000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		090000000000000000000002 /* Build configuration list for PBXNativeTarget "AIAssistant" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				080000000000000000000003 /* Debug */,
+				080000000000000000000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 070000000000000000000001 /* Project object */;
+}

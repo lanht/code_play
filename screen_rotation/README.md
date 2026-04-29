@@ -121,4 +121,3 @@ screen_rotation/
 ## License
 
 仅作学习与工程实践示例使用。
-

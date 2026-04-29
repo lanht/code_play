@@ -58,6 +58,23 @@ final class ScreenOrientationManager {
         currentPolicy.mask
     }
 
+    var currentInterfaceOrientation: UIInterfaceOrientation {
+        if let orientation = windowScene?.interfaceOrientation, orientation != .unknown {
+            return orientation
+        }
+
+        let sceneWindows = UIApplication.shared.connectedScenes
+            .compactMap { $0 as? UIWindowScene }
+            .flatMap(\.windows)
+
+        if let orientation = sceneWindows.first(where: \.isKeyWindow)?.windowScene?.interfaceOrientation,
+           orientation != .unknown {
+            return orientation
+        }
+
+        return currentPolicy.preferredOrientation
+    }
+
     private init() {}
 
     func attach(windowScene: UIWindowScene) {
