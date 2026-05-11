@@ -16,7 +16,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "24"
             endingLineNumber = "24"
-            landmarkName = "supportedInterfaceOrientations"
+            landmarkName = "preferredInterfaceOrientationForPresentation"
             landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
@@ -32,7 +32,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "20"
             endingLineNumber = "20"
-            landmarkName = "shouldAutorotate"
+            landmarkName = "supportedInterfaceOrientations"
             landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
