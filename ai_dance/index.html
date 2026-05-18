@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DanceFrame Studio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">AI Dance Video Generator</p>
+          <h1>DanceFrame Studio</h1>
+        </div>
+        <div class="status-pill runway" id="serviceStatus">
+          <span class="status-dot"></span>
+          Runway Act-Two
+        </div>
+      </header>
+
+      <section class="workspace" aria-label="舞蹈视频生成工作台">
+        <form class="panel upload-panel" id="generateForm">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Step 01</p>
+              <h2>上传素材</h2>
+            </div>
+            <button class="ghost-button" type="button" id="resetButton" aria-label="清空素材">
+              清空
+            </button>
+          </div>
+
+          <label class="dropzone" id="photoDropzone">
+            <input id="photoInput" name="photo" type="file" accept="image/*" required />
+            <span class="drop-icon" aria-hidden="true">+</span>
+            <span class="drop-title">人物全身照</span>
+            <span class="drop-copy">建议正面站姿、完整身体、背景干净</span>
+            <img id="photoPreview" alt="人物照片预览" />
+          </label>
+
+          <label class="dropzone" id="danceDropzone">
+            <input id="danceInput" name="dance" type="file" accept="video/*" required />
+            <span class="drop-icon" aria-hidden="true">▶</span>
+            <span class="drop-title">参考跳舞视频</span>
+            <span class="drop-copy">建议 5-20 秒、主体清晰、动作连续</span>
+            <video id="dancePreview" muted loop playsinline></video>
+          </label>
+
+          <div class="control-grid">
+            <label>
+              <span>生成时长</span>
+              <select id="durationSelect" name="duration">
+                <option value="match">匹配参考视频</option>
+                <option value="8">8 秒</option>
+                <option value="12">12 秒</option>
+                <option value="16">16 秒</option>
+              </select>
+            </label>
+            <label>
+              <span>画幅比例</span>
+              <select id="ratioSelect" name="ratio">
+                <option value="9:16">9:16 竖屏</option>
+                <option value="1:1">1:1 方形</option>
+                <option value="16:9">16:9 横屏</option>
+              </select>
+            </label>
+            <label class="range-field">
+              <span>动作强度 <b id="motionValue">72</b></span>
+              <input id="motionRange" name="motion" type="range" min="20" max="100" value="72" />
+            </label>
+            <label class="toggle-field">
+              <input id="faceLock" name="faceLock" type="checkbox" checked />
+              <span>保持脸部身份</span>
+            </label>
+          </div>
+
+          <button class="primary-button" type="submit" id="generateButton">
+            生成跳舞视频
+          </button>
+        </form>
+
+        <section class="stage-panel" aria-label="生成预览">
+          <div class="preview-stage" id="previewStage">
+            <div class="scanline"></div>
+            <div class="empty-state" id="emptyState">
+              <p class="eyebrow">Step 02</p>
+              <h2>等待素材进入舞台</h2>
+              <p>上传照片和参考视频后，这里会展示任务进度和结果预览。</p>
+            </div>
+
+            <div class="composition" id="composition" hidden>
+              <div class="portrait-card">
+                <img id="stagePhoto" alt="舞者照片" />
+              </div>
+              <div class="motion-card">
+                <video id="stageVideo" muted loop playsinline></video>
+              </div>
+              <div class="output-frame" id="outputFrame">
+              <div class="output-badge" id="outputBadge">准备生成</div>
+              <canvas id="resultCanvas" width="720" height="960" aria-label="生成视频预览画布"></canvas>
+              <video id="resultVideo" controls playsinline hidden></video>
+            </div>
+          </div>
+          </div>
+
+          <div class="progress-area">
+            <div class="progress-copy">
+              <span id="progressLabel">未开始</span>
+              <strong id="progressPercent">0%</strong>
+            </div>
+            <div class="progress-track" aria-hidden="true">
+              <span id="progressBar"></span>
+            </div>
+          </div>
+        </section>
+
+        <aside class="panel result-panel" aria-label="任务状态">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Step 03</p>
+              <h2>任务详情</h2>
+            </div>
+          </div>
+
+          <dl class="summary-list">
+            <div>
+              <dt>照片</dt>
+              <dd id="photoMeta">未上传</dd>
+            </div>
+            <div>
+              <dt>视频</dt>
+              <dd id="videoMeta">未上传</dd>
+            </div>
+            <div>
+              <dt>预计耗时</dt>
+              <dd id="etaMeta">约 1-3 分钟</dd>
+            </div>
+            <div>
+              <dt>Runway 任务</dt>
+              <dd id="jobMeta">未创建</dd>
+            </div>
+          </dl>
+
+          <ol class="timeline" id="timeline">
+            <li class="active">等待上传人物全身照</li>
+            <li>等待上传参考舞蹈</li>
+            <li>检测人体姿态与动作节拍</li>
+            <li>生成舞蹈视频</li>
+            <li>导出结果</li>
+          </ol>
+
+          <div class="api-card">
+            <p class="eyebrow">Integration</p>
+            <h3>真实模型接口</h3>
+            <p>
+              已接入 Runway <code>act_two</code>。通过本地代理服务上传素材、创建任务并轮询结果，
+              API Key 只保存在服务端环境变量里。
+            </p>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
